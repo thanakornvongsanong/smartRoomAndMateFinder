@@ -86,7 +86,7 @@
     </header>
 
     <!-- Services Section -->
-    <section id="services">
+    <section id="services" style="background-color:gray">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -98,18 +98,18 @@
                 <div class="col-md-6">
                     <span class="fa-stack fa-4x">
                         <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fa fa-shopping-cart fa-stack-1x fa-inverse"></i>
+                        <i class="glyphicon glyphicon-user"></i>
                     </span>
                     <h4 class="service-heading">Find Roommate</h4>
-                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                    <p >You can find roommates who meet your requirements.</p>
                 </div>
                 <div class="col-md-6">
                     <span class="fa-stack fa-4x">
                         <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fa fa-laptop fa-stack-1x fa-inverse"></i>
+                        <i class="glyphicon glyphicon-home"></i>
                     </span>
                     <h4 class="service-heading">Find Room</h4>
-                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                    <p>You can find room who meet your requirements.</p>
                 </div>
                 
             </div>
@@ -117,12 +117,12 @@
     </section>
 
 <!-- Guide Section -->
-    <section id="about">
+    <section id="about"  style="background-color:gray">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading">Guide</h2>
-                    <h3 class="section-subheading text-muted">How to use our services.</h3>
+                    <h3 class="section-subheading">How to use our services.</h3>
                 </div>
             </div>
             <div class="row">
@@ -138,7 +138,7 @@
                                     <h4 class="subheading">with your Facebook account</h4>
                                 </div>
                                 <div class="timeline-body">
-                                    <p class="text-muted">It gives you a simple, fast, and secure way to login to our site.  No need to remember another username/password combination.</p>
+                                    <p>It gives you a simple, fast, and secure way to login to our site.  No need to remember another username/password combination.</p>
                                 </div>
                             </div>
                         </li>
@@ -152,7 +152,7 @@
                                     <h4 class="subheading">your requirements.</h4>
                                 </div>
                                 <div class="timeline-body">
-                                    <p class="text-muted">To make it easier to find your room or roommate.</p>
+                                    <p>To make it easier to find your room or roommate.</p>
                                 </div>
                             </div>
                         </li>
@@ -166,7 +166,7 @@
                                     <h4 class="subheading">room or roommate.</h4>
                                 </div>
                                 <div class="timeline-body">
-                                    <p class="text-muted">Find as you want to give you what you want.</p>
+                                    <p>Find as you want to give you what you want.</p>
                                 </div>
                             </div>
                         </li>
@@ -180,7 +180,7 @@
                                     <h4 class="subheading">the results of your find.</h4>
                                 </div>
                                 <div class="timeline-body">
-                                    <p class="text-muted">To make it easier to determine when you have results similar characteristics. </p>
+                                    <p>To make it easier to determine when you have results similar characteristics. </p>
                                 </div>
                             </div>
                         </li>
@@ -194,7 +194,7 @@
                                     <h4 class="subheading">your request.</h4>
                                 </div>
                                 <div class="timeline-body">
-                                    <p class="text-muted">In part of find roommate you will send your request to who that match your requirements but part of find room you will contact to apartment owners by yourself.</p>
+                                    <p>In part of find roommate you will send your request to who that match your requirements but part of find room you will contact to apartment owners by yourself.</p>
                                 </div>
                             </div>
                         </li>
@@ -208,7 +208,7 @@
                                     <h4 class="subheading">your find.</h4>
                                 </div>
                                 <div class="timeline-body">
-                                    <p class="text-muted">When your receiver accept your request the process will be done, If not you can find your new room or roommate all the time.  </p>
+                                    <p>When your receiver accept your request the process will be done, If not you can find your new room or roommate all the time.  </p>
                                 </div>
                             </div>
                         </li>
@@ -222,7 +222,7 @@
     
 
     <!-- Contact Section -->
-    <section id="contact">
+    <section id="contact" >
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
