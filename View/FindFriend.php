@@ -395,7 +395,7 @@
                           <div class="row">
   
                             <div class="col-lg-6" style="background-color:#e0e0d1">
-                                <strong>Detail of finding a room</strong>
+                                <strong>User Information</strong>
                                 <div style="border-color:white">
                                     <div style="margin-bottom:5px">
                                       Room type : 2 people
