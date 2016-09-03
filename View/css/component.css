@@ -58,7 +58,7 @@
 }
 
 .product--selected {
-	box-shadow: 0 0 0 2px #5C5EDC;
+	box-shadow: 0 0 0 2px #ffff00;
 }
 
 .flexbox .product {
@@ -141,11 +141,17 @@
 	font-size: 150%;
 	margin: 1em 0 0;
 	min-height: 3em;
+	color:white;
 }
 
 .product__price {
 	font-weight: bold;
 	color: #797BED;
+}
+
+.product__any {
+	font-weight: bold;
+	color: white;
 }
 
 .action {
@@ -164,8 +170,8 @@
 }
 
 .action--button {
-	background: #2C2D34;
-	color: #fff;
+	background: #ffff00;
+	color: #2C2D34;
 	border-radius: 2px;
 	-webkit-transition: background 0.2s;
 	transition: background 0.2s;
@@ -173,6 +179,7 @@
 
 .action--button:hover {
 	background: #5C5EDC;
+	color: #ffff00;
 }
 
 .action__text {
@@ -182,6 +189,7 @@
 	font-size: .813em;
 	vertical-align: middle;
 	display: inline-block;
+	color: #565B6C;
 }
 
 .action__text--invisible {
@@ -189,6 +197,7 @@
 	top: 100%;
 	opacity: 0;
 	pointer-events: none;
+	color: #565B6C;
 }
 
 .action--button i + span {
@@ -203,6 +212,7 @@
 	-webkit-flex: none;
 	-ms-flex: none;
 	flex: none;
+	color: #565B6C;
 }
 
 .action--close {
@@ -235,20 +245,21 @@
 	opacity: 0;
 	pointer-events: none;
 	cursor: default;
-	background-color: #34363D;
+	background-color: #ffff00;
 	color: #565B6C;
 	-webkit-transition: opacity 0.3s;
 	transition: opacity 0.3s;
 }
 
 .compare-basket--active .action--compare {
+
 	opacity: 1;
 }
 
 .compare-basket--active .action--compare:nth-child(3),
 .compare-basket--active .action--compare:nth-child(4) {
-	background-color: #494BC7;
-	color: #fff;
+	background-color: #ffff00;
+	color: #565B6C;
 	pointer-events: auto;
 	cursor: pointer;
 }
@@ -268,13 +279,14 @@
 	position: absolute;
 	top: 10px;
 	right: 5px;
+	color: white;
 }
 
 .action--compare-add:hover .action__text--invisible {
 	opacity: 1;
 	top: 35px;
 	right: 10px;
-	color: #ddd;
+	color: #ffff00;
 	font-size: 75%;
 	letter-spacing: 0;
 	background: #2F3035;
@@ -284,7 +296,7 @@
 
 .action--remove:hover,
 .action--compare-add:hover {
-	color: #5C5EDC;
+	color: #ffff00;
 }
 
 .action--compare-add .fa-check,
@@ -294,7 +306,7 @@
 
 .action--compare-add input[type=checkbox]:checked ~ .fa-check {
 	display: block;
-	color: #5C5EDC;
+	color: #ffff00;
 }
 
 .check-hidden {
