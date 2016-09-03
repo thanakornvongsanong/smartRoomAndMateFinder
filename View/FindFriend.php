@@ -364,7 +364,7 @@
 
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <p class="large text-muted">Smart Room and Mate-Finder</p>
+                    <p class="large text-muted">Mate-Finder.com</p>
                 </div>
             </div>
         </div>
