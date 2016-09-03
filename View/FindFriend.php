@@ -395,7 +395,7 @@
                           <div class="row">
   
                             <div class="col-lg-6" style="background-color:#e0e0d1">
-                                <strong>User Information</strong>
+                                <strong>Detail of finding a room</strong>
                                 <div style="border-color:white">
                                     <div style="margin-bottom:5px">
                                       Room type : 2 people
@@ -422,10 +422,10 @@
                             </div>
 
                             <div class="col-lg-6" style="margin-bottom:5px; background-color:#d9d9d9;">
-                                <strong>Detail of finding roommate</strong>
+                                <strong>User Information</strong>
                            
                             <div style="margin-bottom:5px;"> Gender : Male </div>
-                            <div style="margin-bottom:5px;"> Age : 25 - 35 years </div>
+                            <div style="margin-bottom:5px;"> Age : 25 years </div>
                             <div style="margin-bottom:5px;"> Cleanliness : Very clean </div>
                             <div style="margin-bottom:5px;"> Party habits : Not at all </div>
                             <div style="margin-bottom:5px;"> Habit : Friendly </div>
