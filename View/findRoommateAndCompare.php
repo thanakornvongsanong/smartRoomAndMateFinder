@@ -14,6 +14,7 @@
 		<link rel="stylesheet" type="text/css" href="css/component.css" />
 		<!-- Modernizr is used for flexbox fallback -->
 		<script src="js/modernizr.custom.js"></script>
+		
 	</head>
 	<body>
 		<!-- Compare basket -->
@@ -39,7 +40,9 @@
 				<div class="product">
 					<div class="product__info">
 						<img class="product__image" src="img/userCompare.png" alt="Product 1" />
-						<h3 class="product__title">Chryseia</h3>
+						
+						<h3 class="product__title ">Chryseia
+						<a href="#Facebook"> &nbsp;&nbsp;<span class=" fa fa-facebook-square"></span></a></h3>
 						<span class="product__any extra highlight">Clean: </span>
 						<span class="product__any extra highlight">Party:</span>
 						<span class="product__any extra highlight">Snore: </span>
@@ -51,6 +54,7 @@
 						<span class="product__any extra highlight">Pets: </span>
 						<span class="product__any extra highlight">Have children: </span>
 						<span class="product__any  highlight">Approx. move in date: </span>
+						
 						<button class="action action--button action--buy"><i class="fa fa-paper-plane"></i><span class="action__text">Send Request</span></button>
 					</div>
 					<label class="action action--compare-add"><input class="check-hidden" type="checkbox" /><i class="fa fa-plus"></i><i class="fa fa-check"></i><span class="action__text action__text--invisible">Add to compare</span></label>
@@ -58,7 +62,9 @@
 				<div class="product">
 					<div class="product__info">
 						<img class="product__image" src="img/userCompare.png" alt="Product 1" />
-						<h3 class="product__title">Chryseia</h3>
+						<h3 class="product__title ">Chryseia 
+						<a href="#Facebook"> &nbsp;&nbsp;<span class=" fa fa-facebook-square"></span></a>
+						</h3>
 						<span class="product__any extra highlight">Clean: </span>
 						<span class="product__any extra highlight">Party:</span>
 						<span class="product__any extra highlight">Snore: </span>
@@ -70,6 +76,7 @@
 						<span class="product__any extra highlight">Pets: </span>
 						<span class="product__any extra highlight">Have children: </span>
 						<span class="product__any  highlight">Approx. move in date: </span>
+						
 						<button class="action action--button action--buy"><i class="fa fa-paper-plane"></i><span class="action__text">Send Request</span></button>
 					</div>
 					<label class="action action--compare-add"><input class="check-hidden" type="checkbox" /><i class="fa fa-plus"></i><i class="fa fa-check"></i><span class="action__text action__text--invisible">Add to compare</span></label>
@@ -77,7 +84,9 @@
 				<div class="product">
 					<div class="product__info">
 						<img class="product__image" src="img/userCompare.png" alt="Product 1" />
-						<h3 class="product__title">Chryseia</h3>
+						<h3 class="product__title ">Chryseia 
+						<a href="#Facebook"> &nbsp;&nbsp;<span class=" fa fa-facebook-square"></span></a>
+						</h3>
 						<span class="product__any extra highlight">Clean: </span>
 						<span class="product__any extra highlight">Party:</span>
 						<span class="product__any extra highlight">Snore: </span>
@@ -89,6 +98,7 @@
 						<span class="product__any extra highlight">Pets: </span>
 						<span class="product__any extra highlight">Have children: </span>
 						<span class="product__any  highlight">Approx. move in date: </span>
+						
 						<button class="action action--button action--buy"><i class="fa fa-paper-plane"></i><span class="action__text">Send Request</span></button>
 					</div>
 					<label class="action action--compare-add"><input class="check-hidden" type="checkbox" /><i class="fa fa-plus"></i><i class="fa fa-check"></i><span class="action__text action__text--invisible">Add to compare</span></label>
@@ -96,7 +106,9 @@
 				<div class="product">
 					<div class="product__info">
 						<img class="product__image" src="img/userCompare.png" alt="Product 1" />
-						<h3 class="product__title">Chryseia</h3>
+						<h3 class="product__title ">Chryseia 
+						<a href="#Facebook"> &nbsp;&nbsp;<span class=" fa fa-facebook-square"></span></a>
+						</h3>
 						<span class="product__any extra highlight">Clean: </span>
 						<span class="product__any extra highlight">Party:</span>
 						<span class="product__any extra highlight">Snore: </span>
@@ -108,6 +120,7 @@
 						<span class="product__any extra highlight">Pets: </span>
 						<span class="product__any extra highlight">Have children: </span>
 						<span class="product__any  highlight">Approx. move in date: </span>
+						
 						<button class="action action--button action--buy"><i class="fa fa-paper-plane"></i><span class="action__text">Send Request</span></button>
 					</div>
 					<label class="action action--compare-add"><input class="check-hidden" type="checkbox" /><i class="fa fa-plus"></i><i class="fa fa-check"></i><span class="action__text action__text--invisible">Add to compare</span></label>
@@ -115,7 +128,9 @@
 				<div class="product">
 					<div class="product__info">
 						<img class="product__image" src="img/userCompare.png" alt="Product 1" />
-						<h3 class="product__title">Chryseia</h3>
+						<h3 class="product__title ">Chryseia 
+						<a href="#Facebook"> &nbsp;&nbsp;<span class=" fa fa-facebook-square"></span></a>
+						</h3>
 						<span class="product__any extra highlight">Clean: </span>
 						<span class="product__any extra highlight">Party:</span>
 						<span class="product__any extra highlight">Snore: </span>
@@ -127,6 +142,7 @@
 						<span class="product__any extra highlight">Pets: </span>
 						<span class="product__any extra highlight">Have children: </span>
 						<span class="product__any  highlight">Approx. move in date: </span>
+						
 						<button class="action action--button action--buy"><i class="fa fa-paper-plane"></i><span class="action__text">Send Request</span></button>
 					</div>
 					<label class="action action--compare-add"><input class="check-hidden" type="checkbox" /><i class="fa fa-plus"></i><i class="fa fa-check"></i><span class="action__text action__text--invisible">Add to compare</span></label>
@@ -134,7 +150,9 @@
 				<div class="product">
 					<div class="product__info">
 						<img class="product__image" src="img/userCompare.png" alt="Product 1" />
-						<h3 class="product__title">Chryseia</h3>
+						<h3 class="product__title ">Chryseia 
+						<a href="#Facebook"> &nbsp;&nbsp;<span class=" fa fa-facebook-square"></span></a>
+						</h3>
 						<span class="product__any extra highlight">Clean: </span>
 						<span class="product__any extra highlight">Party:</span>
 						<span class="product__any extra highlight">Snore: </span>
@@ -146,6 +164,7 @@
 						<span class="product__any extra highlight">Pets: </span>
 						<span class="product__any extra highlight">Have children: </span>
 						<span class="product__any  highlight">Approx. move in date: </span>
+						
 						<button class="action action--button action--buy"><i class="fa fa-paper-plane"></i><span class="action__text">Send Request</span></button>
 					</div>
 					<label class="action action--compare-add"><input class="check-hidden" type="checkbox" /><i class="fa fa-plus"></i><i class="fa fa-check"></i><span class="action__text action__text--invisible">Add to compare</span></label>
@@ -153,7 +172,9 @@
 				<div class="product">
 					<div class="product__info">
 						<img class="product__image" src="img/userCompare.png" alt="Product 1" />
-						<h3 class="product__title">Chryseia</h3>
+						<h3 class="product__title ">Chryseia 
+						<a href="#Facebook"> &nbsp;&nbsp;<span class=" fa fa-facebook-square"></span></a>
+						</h3>
 						<span class="product__any extra highlight">Clean: </span>
 						<span class="product__any extra highlight">Party:</span>
 						<span class="product__any extra highlight">Snore: </span>
@@ -165,6 +186,7 @@
 						<span class="product__any extra highlight">Pets: </span>
 						<span class="product__any extra highlight">Have children: </span>
 						<span class="product__any  highlight">Approx. move in date: </span>
+						
 						<button class="action action--button action--buy"><i class="fa fa-paper-plane"></i><span class="action__text">Send Request</span></button>
 					</div>
 					<label class="action action--compare-add"><input class="check-hidden" type="checkbox" /><i class="fa fa-plus"></i><i class="fa fa-check"></i><span class="action__text action__text--invisible">Add to compare</span></label>
@@ -172,7 +194,9 @@
 				<div class="product">
 					<div class="product__info">
 						<img class="product__image" src="img/userCompare.png" alt="Product 1" />
-						<h3 class="product__title">Chryseia</h3>
+						<h3 class="product__title ">Chryseia 
+						<a href="#Facebook"> &nbsp;&nbsp;<span class=" fa fa-facebook-square"></span></a>
+						</h3>
 						<span class="product__any extra highlight">Clean: </span>
 						<span class="product__any extra highlight">Party:</span>
 						<span class="product__any extra highlight">Snore: </span>
@@ -184,6 +208,7 @@
 						<span class="product__any extra highlight">Pets: </span>
 						<span class="product__any extra highlight">Have children: </span>
 						<span class="product__any  highlight">Approx. move in date: </span>
+						
 						<button class="action action--button action--buy"><i class="fa fa-paper-plane"></i><span class="action__text">Send Request</span></button>
 					</div>
 					<label class="action action--compare-add"><input class="check-hidden" type="checkbox" /><i class="fa fa-plus"></i><i class="fa fa-check"></i><span class="action__text action__text--invisible">Add to compare</span></label>
@@ -191,7 +216,9 @@
 				<div class="product">
 					<div class="product__info">
 						<img class="product__image" src="img/userCompare.png" alt="Product 1" />
-						<h3 class="product__title">Chryseia</h3>
+						<h3 class="product__title ">Chryseia 
+						<a href="#Facebook"> &nbsp;&nbsp;<span class=" fa fa-facebook-square"></span></a>
+						</h3>
 						<span class="product__any extra highlight">Clean: </span>
 						<span class="product__any extra highlight">Party:</span>
 						<span class="product__any extra highlight">Snore: </span>
@@ -203,6 +230,7 @@
 						<span class="product__any extra highlight">Pets: </span>
 						<span class="product__any extra highlight">Have children: </span>
 						<span class="product__any  highlight">Approx. move in date: </span>
+						
 						<button class="action action--button action--buy"><i class="fa fa-paper-plane"></i><span class="action__text">Send Request</span></button>
 					</div>
 					<label class="action action--compare-add"><input class="check-hidden" type="checkbox" /><i class="fa fa-plus"></i><i class="fa fa-check"></i><span class="action__text action__text--invisible">Add to compare</span></label>
@@ -210,7 +238,9 @@
 				<div class="product">
 					<div class="product__info">
 						<img class="product__image" src="img/userCompare.png" alt="Product 1" />
-						<h3 class="product__title">Chryseia</h3>
+						<h3 class="product__title ">Chryseia 
+						<a href="#Facebook"> &nbsp;&nbsp;<span class=" fa fa-facebook-square"></span></a>
+						</h3>
 						<span class="product__any extra highlight">Clean: </span>
 						<span class="product__any extra highlight">Party:</span>
 						<span class="product__any extra highlight">Snore: </span>
@@ -222,6 +252,7 @@
 						<span class="product__any extra highlight">Pets: </span>
 						<span class="product__any extra highlight">Have children: </span>
 						<span class="product__any  highlight">Approx. move in date: </span>
+						
 						<button class="action action--button action--buy"><i class="fa fa-paper-plane"></i><span class="action__text">Send Request</span></button>
 					</div>
 					<label class="action action--compare-add"><input class="check-hidden" type="checkbox" /><i class="fa fa-plus"></i><i class="fa fa-check"></i><span class="action__text action__text--invisible">Add to compare</span></label>
@@ -229,7 +260,9 @@
 				<div class="product">
 					<div class="product__info">
 						<img class="product__image" src="img/userCompare.png" alt="Product 1" />
-						<h3 class="product__title">Chryseia</h3>
+						<h3 class="product__title ">Chryseia 
+						<a href="#Facebook"> &nbsp;&nbsp;<span class=" fa fa-facebook-square"></span></a>
+						</h3>
 						<span class="product__any extra highlight">Clean: </span>
 						<span class="product__any extra highlight">Party:</span>
 						<span class="product__any extra highlight">Snore: </span>
@@ -241,11 +274,11 @@
 						<span class="product__any extra highlight">Pets: </span>
 						<span class="product__any extra highlight">Have children: </span>
 						<span class="product__any  highlight">Approx. move in date: </span>
+						
 						<button class="action action--button action--buy"><i class="fa fa-paper-plane"></i><span class="action__text">Send Request</span></button>
 					</div>
 					<label class="action action--compare-add"><input class="check-hidden" type="checkbox" /><i class="fa fa-plus"></i><i class="fa fa-check"></i><span class="action__text action__text--invisible">Add to compare</span></label>
 				</div>
-				
 			</section>
 		</div><!-- /view -->
 		<!-- product compare wrapper -->

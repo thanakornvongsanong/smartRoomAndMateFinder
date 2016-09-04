@@ -82,7 +82,7 @@
 .product__image {
 	display: block;
 	margin: 0 auto;
-	max-width: 100%;
+	max-width: 90%;
 	-webkit-transform-origin: 50% 100%;
 	transform-origin: 50% 100%;
 }
@@ -189,7 +189,7 @@
 	font-size: .813em;
 	vertical-align: middle;
 	display: inline-block;
-	color: #565B6C;
+	color: #2A2B30;
 }
 
 .action__text--invisible {
@@ -212,7 +212,7 @@
 	-webkit-flex: none;
 	-ms-flex: none;
 	flex: none;
-	color: #565B6C;
+	color: #2A2B30;
 }
 
 .action--close {
@@ -540,6 +540,7 @@
 		-webkit-flex: none;
 		-ms-flex: none;
 		flex: none;
+		width: 20%;
 	}
 }
 

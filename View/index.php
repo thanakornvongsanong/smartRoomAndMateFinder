@@ -45,11 +45,13 @@
 <body id="page-top" class="index">
 
     <?php 
+    //$_SESSION["user"]="gerg";
             if (isset($_SESSION["user"])) {
                 include "headerLogined.php";
             }else{
                 include "headerNotLogin.php";
             }
+
     ?>
 
     <!-- Header -->
@@ -68,26 +70,26 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Services</h2>
+                    <h2 class="section-heading" style="color:white;">Services</h2>
                     <h3 class="section-subheading text-muted"></h3>
                 </div>
             </div>
             <div class="row text-center">
                 <div class="col-md-6">
-                    <span class="fa-stack fa-4x">
+                    <span class="fa-stack fa-5x">
                         <i class="fa fa-circle fa-stack-2x text-primary"></i>
                         <i class="glyphicon glyphicon-user"></i>
                     </span>
-                    <h4 class="service-heading">Find Roommate</h4>
-                    <p >You can find roommates who meet your requirements.</p>
+                    <h4 class="service-heading" style="color:white;font-weight: bold;font-size: 170%;">Find Roommate</h4>
+                    <p style="color:white;font-size: 130%;">You can find roommates who meet your requirements.</p>
                 </div>
                 <div class="col-md-6">
-                    <span class="fa-stack fa-4x">
+                    <span class="fa-stack fa-5x">
                         <i class="fa fa-circle fa-stack-2x text-primary"></i>
                         <i class="glyphicon glyphicon-home"></i>
                     </span>
-                    <h4 class="service-heading">Find Room</h4>
-                    <p>You can find room who meet your requirements.</p>
+                    <h4 class="service-heading" style="color:white;font-weight: bold;font-size: 170%;">Find Room</h4>
+                    <p style="color:white;font-size: 130%;">You can find room who meet your requirements.</p>
                 </div>
                 
             </div>
@@ -99,8 +101,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Guide</h2>
-                    <h3 class="section-subheading">How to use our services.</h3>
+                    <h2 class="section-heading" style="color:white;">Guide</h2>
+                    <h3 class="section-subheading" style="color:white;">How to use our services.</h3>
                 </div>
             </div>
             <div class="row">
@@ -112,11 +114,11 @@
                             </div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
-                                    <h4>Resgister</h4>
-                                    <h4 class="subheading">with your Facebook account</h4>
+                                    <h4 style="color:white;">Resgister</h4>
+                                    <h4 class="subheading" style="color:white;">with your Facebook account</h4>
                                 </div>
                                 <div class="timeline-body">
-                                    <p>It gives you a simple, fast, and secure way to login to our site.  No need to remember another username/password combination.</p>
+                                    <p style="color:white;font-size:120%;">It gives you a simple, fast, and secure way to login to our site.  No need to remember another username/password combination.</p>
                                 </div>
                             </div>
                         </li>
@@ -126,11 +128,11 @@
                             </div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
-                                    <h4>Specify</h4>
-                                    <h4 class="subheading">your requirements.</h4>
+                                    <h4 style="color:white;">Specify</h4>
+                                    <h4 class="subheading" style="color:white;">your requirements.</h4>
                                 </div>
                                 <div class="timeline-body">
-                                    <p>To make it easier to find your room or roommate.</p>
+                                    <p  style="color:white;font-size:120%;">To make it easier to find your room or roommate.</p>
                                 </div>
                             </div>
                         </li>
@@ -140,11 +142,11 @@
                             </div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
-                                    <h4>Find</h4>
-                                    <h4 class="subheading">room or roommate.</h4>
+                                    <h4 style="color:white;">Find</h4>
+                                    <h4 class="subheading" style="color:white;">room or roommate.</h4>
                                 </div>
                                 <div class="timeline-body">
-                                    <p>Find as you want to give you what you want.</p>
+                                    <p  style="color:white;font-size:120%;">Find as you want to give you what you want.</p>
                                 </div>
                             </div>
                         </li>
@@ -154,11 +156,11 @@
                             </div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
-                                    <h4>Compare</h4>
-                                    <h4 class="subheading">the results of your find.</h4>
+                                    <h4 style="color:white;">Compare</h4>
+                                    <h4 class="subheading" style="color:white;">the results of your find.</h4>
                                 </div>
                                 <div class="timeline-body">
-                                    <p>To make it easier to determine when you have results similar characteristics. </p>
+                                    <p  style="color:white;font-size:120%;">To make it easier to determine when you have results similar characteristics. </p>
                                 </div>
                             </div>
                         </li>
@@ -168,11 +170,11 @@
                             </div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
-                                    <h4>Send</h4>
-                                    <h4 class="subheading">your request.</h4>
+                                    <h4 style="color:white;">Send</h4>
+                                    <h4 class="subheading" style="color:white;">your request.</h4>
                                 </div>
                                 <div class="timeline-body">
-                                    <p>In part of find roommate you will send your request to who that match your requirements but part of find room you will contact to apartment owners by yourself.</p>
+                                    <p  style="color:white;font-size:120%;">In part of find roommate you will send your request to who that match your requirements but part of find room you will contact to apartment owners by yourself.</p>
                                 </div>
                             </div>
                         </li>
@@ -182,11 +184,11 @@
                             </div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
-                                    <h4>Complete</h4>
-                                    <h4 class="subheading">your find.</h4>
+                                    <h4 style="color:white;">Complete</h4>
+                                    <h4 class="subheading" style="color:white;">your find.</h4>
                                 </div>
                                 <div class="timeline-body">
-                                    <p>When your receiver accept your request the process will be done, If not you can find your new room or roommate all the time.  </p>
+                                    <p  style="color:white;font-size:120%;">When your receiver accept your request the process will be done, If not you can find your new room or roommate all the time.  </p>
                                 </div>
                             </div>
                         </li>
@@ -205,7 +207,7 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading">Contact Us</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                    <h3 class="section-subheading text-muted"></h3>
                 </div>
             </div>
             <div class="row">

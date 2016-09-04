@@ -1,5 +1,5 @@
 <!-- Navigation -->
-        <nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top" style="background-color:black">
+        <nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top" >
             <div class="container">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header page-scroll">
@@ -20,7 +20,7 @@
                         </li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" >Find <span class="caret"></span></a>
-                                <ul class="dropdown-menu " style="background-color:black">
+                                <ul class="dropdown-menu " style="background-color:#404040">
                                         <li><a href="findroommateandcompare.php" >Find Roommate</a></li>
                                         <li role="separator" class="divider"></li>
                                         <li><a href="findroomandcompare.php">Find Room</a></li>
@@ -31,14 +31,14 @@
                         </li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" >User Name <span class="caret"></span></a>
-                                <ul class="dropdown-menu " style="background-color:black">
+                                <ul class="dropdown-menu " style="background-color:#404040">
                                         <li><a href="profile.php" >Profile</a></li>
                                         <li role="separator" class="divider"></li>
                                         <li><a href="index.php">Logout</a></li>
                                 </ul>
                         </li>
                         <li>
-                            <a ><i class="fa fa-bell" style="color:#fecd1b"><span class="badge badge-notify;position:absolute;top:0px;" style="color:#fecd1b">99</span></i></a>
+                            <a href="#"><i class="fa fa-bell" style="color:#fecd1b"><span class="badge badge-notify;position:absolute;top:0px;" style="color:#fecd1b">99</span></i></a>
                         </li>
 
                     </ul>
