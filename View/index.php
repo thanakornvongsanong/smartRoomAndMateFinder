@@ -45,6 +45,7 @@
 <body id="page-top" class="index">
 
     <?php 
+            if (isset($_SESSION["user"])) {
                 include "headerLogined.php";
             }else{
                 include "headerNotLogin.php";
