@@ -178,7 +178,7 @@
                                             </div>
 
                                             <div  class="col-lg-12">
-                                                Do you want to feed an animal in room?
+                                                Do you want to feed  pets in room?
                                                 <select name="animal" id="inputAnimal" class="form-control" required="required">
                                                   <option value="0">No</option>
                                                   <option value="1">Yes</option>
