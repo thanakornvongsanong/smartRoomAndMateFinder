@@ -52,7 +52,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Fill your profile data.</h2>
+                    <h2 class="section-heading">Fill your room data for search.</h2>
                     <h3 class="section-subheading text-muted">all of these data will use for other people to find you or you find other people</h3>
                 </div>
             </div>
@@ -66,106 +66,66 @@
                                     <div class="row">
                                     <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2"></div>
                                         <div  class="col-lg-8 text-left " style="padding-left: 0.5cm; padding-right: 0.5cm; padding-top: 1.0cm">
-                                            <div  class="col-lg-12">
-                                            Clean level
-                                                <select name="cleanlevel" id="inputClean" class="form-control" required="required">
-                                                  <option value="%">Not specified</option>
-                                                  <option value="5">Very clean</option>
-                                                  <option value="4">Relatively clean</option>
-                                                  <option value="3">Clean medium</option>
-                                                  <option value="2">Quite not clean</option>
-                                                  <option value="1">Not clean</option>
-                                                </select>
-                                            </div>
 
-                                            <div  class="col-lg-12">
-                                                The frequency of parties
-                                                <select name="partylevel" id="inputPartylevel" class="form-control" required="required">
-                                                  <option value="%">Not specified</option>
-                                                  <option value="5">Everyday</option>
-                                                  <option value="4">Quite often</option>
-                                                  <option value="3">Sometime</option>
-                                                  <option value="2">Rarely</option>
-                                                  <option value="1">Never</option>
-                                                </select>
-                                           </div>
                                            <div  class="col-lg-12">
-                                                Snore level
-                                                <select name="snorelevel" id="inputSnorelevel" class="form-control" required="required">
-                                                  <option value="%">Not specified</option>
-                                                  <option value="5">Very Lound</option>
-                                                  <option value="4">Lound</option>
-                                                  <option value="3">Middle</option>
-                                                  <option value="2">Low</option>
-                                                  <option value="1">Non-snoring</option>
-                                                </select>
-                                            </div>
-                                            <div  class="col-lg-12">
-                                                Smoke level
-                                                <select name="smokelevel" id="inputSmokelevel" class="form-control" required="required">
-                                                 <option value="%">Not specified</option>
-                                                  <option value="5">All the time</option>
-                                                  <option value="4">Quite often</option>
-                                                  <option value="3">Sometime</option>
-                                                  <option value="2">Rarely</option>
-                                                  <option value="1">Never</option>
-                                                </select>
-                                            </div>
-                                            <div  class="col-lg-12">
-                                                Status
-                                                <select name="status" id="inputStatus" class="form-control" required="required">
-                                                  <option value="%">Not specified</option>
-                                                  <option value="1">Single</option>
-                                                   <option value="0">Married</option>
+                                                 Limit of number people per room
+                                                <select name="limit" id="inputRentperiod" class="form-control" required="required">
+                                                   <option value="%">Not specified</option>
+                                                  <option value="4">4</option>
+                                                  <option value="3">3</option>
+                                                  <option value="2">2</option>
+                                                  <option value="1">1</option>
                                                 </select>
                                             </div>
                                             <div  class="col-lg-12">
                                                 Rental period
                                                 <select name="rentperiod" id="inputRentperiod" class="form-control" required="required">
                                                    <option value="%">Not specified</option>
-                                                   <option value="4">12-24 Months</optio>
+                                                  <option value="4">12-24 Months</option>
                                                   <option value="3">6-12 Months</option>
                                                   <option value="2">3-6 Months</option>
                                                   <option value="1">1-3 Months</option>
                                                 </select>
                                             </div>
-
-                                               <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"> Rent cost </div>
-
-                                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                                                  <input type="number" name="minrentcost" id="inputMinrentcost" class="form-control"  required="required" placeholder="Min">
-                                                </div>
-                                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                                                  <input type="number" name="maxrentcost" id="inputMaxrentcost" class="form-control"  required="required" placeholder="Max">
-                                                </div>
-
-                                             <div  class="col-lg-12">
-                                                Do you have a room yet?
-                                                <select name="room" id="inputRoom" class="form-control" required="required">
-                                                  <option value="0">No</option>
-                                                  <option value="1">Yes</option>
-                                                </select>
-                                            </div>
-
                                             <div  class="col-lg-12">
-                                                Do you want to feed  pets in room?
-                                                <select name="animal" id="inputAnimal" class="form-control" required="required">
-                                                  <option value="0">No</option>
+                                                Smoking allowed
+                                                <select name="smokingallowed" id="inputSmokelevel" class="form-control" required="required">
+                                                <option value="%">Not specified</option>
                                                   <option value="1">Yes</option>
+                                                  <option value="0">No</option>
                                                 </select>
                                             </div>
-
                                             <div  class="col-lg-12">
-                                                Do you have  children?
-                                                <select name="children" id="inputChildren" class="form-control" required="required">
-                                                  <option value="0">No</option>
+                                                Pets allow
+                                                <select name="petsallow" id="inputSmokelevel" class="form-control" required="required">
+                                                  <option value="%">Not specified</option>
                                                   <option value="1">Yes</option>
+                                                  <option value="0">No</option>
                                                 </select>
                                             </div>
-
-                                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                              Approx. move in date
-                                              <input type="date" name="movedate" id="inputMovedate" class="form-control" value="" required="required" title="">
+                                            <div  class="col-lg-12">
+                                                Washing machine
+                                                <select name="washingmachine" id="inputSmokelevel" class="form-control" required="required">
+                                                <option value="%">Not specified</option>
+                                                  <option value="1">Yes</option>
+                                                  <option value="0">No</option>
+                                                </select>
+                                            </div>
+                                            <div  class="col-lg-12">
+                                                Internet
+                                                <select name="internet" id="inputSmokelevel" class="form-control" required="required">
+                                                  <option value="%">Not specified</option>
+                                                  <option value="1">Yes</option>
+                                                  <option value="0">No</option>
+                                                </select>
+                                            </div>
+                                            <div  class="col-lg-12">
+                                                Cable TV
+                                                <select name="cabletv" id="inputSmokelevel" class="form-control" required="required">
+                                                  <option value="%">Not specified</option>
+                                                  <option value="1">Yes</option>
+                                                  <option value="0">No</option>
+                                                </select>
                                             </div>
 
                                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" align="center">
