@@ -126,6 +126,7 @@
                                                   <option value="1">Yes</option>
                                                   <option value="0">No</option>
                                                 </select>
+                                                <button type="button" class="btn btn-default" style="active:">button</button>
                                             </div>
 
                                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" align="center">
