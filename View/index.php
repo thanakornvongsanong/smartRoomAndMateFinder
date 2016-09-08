@@ -28,7 +28,7 @@
     <!-- Theme CSS -->
     <link href="css/agency.min.css" rel="stylesheet">
    
-     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  
 
     <!--Font Awesome-->
      <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
