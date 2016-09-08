@@ -40,6 +40,7 @@
 });
    function test(){
      var a = $("#txt1").val();
+     
    }
 </script>
          
