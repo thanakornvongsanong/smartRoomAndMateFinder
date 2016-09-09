@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -36,52 +37,27 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 <link href="css/bootstrap-toggle.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/myStyle.css">
+<style>
+
+
+</style>
 </head>
 
 <body id="page-top" class="index">
 <form action="test.php" method="GET">
-  <!-- Navigation -->
-    <nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top" style="background-color:black">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
-                </button>
-                <a class="navbar-brand page-scroll" href="#page-top">Smart Room and Mate Finder</a>
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="hidden">
-                        <a href="#page-top"></a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#services">Services</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#about">Guide</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#portfolio">Login with Facebook</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container-fluid -->
-    </nav>
+  <?php 
+          include "headerLogined.php";
+    ?>
     
 <section>
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4">
-    
-            Rent cost
-
-       <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+       Rent cost
+    </div>
+           
+<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+  <div class="row">
             <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
                 <input type="number" name="minroom" id="inputMinroom" class="form-control" value="" required="required" pattern="" title="" placeholder="Min">
             </div>
@@ -89,32 +65,43 @@
                 <input type="number" name="maxroom" id="inputMaxroom" class="form-control" value="" required="required" pattern="" title="" placeholder="Max">
             </div>
        </div>
+</div>
+       
 
-       Limit of number people per room
-  
-                <div class="btn-group btn-group-justified" role="group" >
-                      <div class="btn-group" role="group" >
-                        <button type="button" class="btn btn-default " >None</button>
-                      </div>
-                      <div class="btn-group" role="group">
-                        <button type="button" class="btn btn-default" >1</button>
-                      </div>
-                      <div class="btn-group" role="group">
-                        <button type="button" class="btn btn-default" >2</button>
-                      </div>
-                      <div class="btn-group" role="group">
-                        <button type="button" class="btn btn-default" >3</button>
-                      </div>
-                      <div class="btn-group" role="group">
-                        <button type="button" class="btn btn-default" >4</button>
-                      </div>
-                      
-                </div>
-   
-          Facilities
+       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+         Limit of number people per room
+       </div>
+<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+  <div class="btn-group" data-toggle="buttons" >
+      <label class="btn btn-default active" style="background-color:#fed136;color:white;font-weight: bold;">Unlimit
+        <input type="radio" name="limit0" id="limit0" autocomplete="off" chacked>
+        <span class="glyphicon glyphicon-ok"></span>
+      </label>
+
+      <label class="btn btn-default" style="background-color:#fed136;color:white;font-weight: bold;">1
+        <input type="radio" name="limit1" id="limit1" autocomplete="off">
+        <span class="glyphicon glyphicon-ok"></span>
+      </label>
+      <label class="btn btn-default" style="background-color:#fed136;color:white;font-weight: bold;">2
+        <input type="radio" name="limit2" id="limit2" autocomplete="off">
+        <span class="glyphicon glyphicon-ok"></span>
+      </label>
+      <label class="btn btn-default" style="background-color:#fed136;color:white;font-weight: bold;">3
+        <input type="radio" name="limit3" id="limit3" autocomplete="off">
+        <span class="glyphicon glyphicon-ok"></span>
+      </label>
+      <label class="btn btn-default" style="background-color:#fed136;color:white;font-weight: bold;">4
+        <input type="radio" name="limit4" id="limit4" autocomplete="off">
+        <span class="glyphicon glyphicon-ok"></span>
+      </label>
+</div>
+</div>
+
+ 
           <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            
+         <br>Facilities
           </div>
+             
         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
           
           <label>

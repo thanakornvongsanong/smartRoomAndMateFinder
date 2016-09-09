@@ -321,7 +321,7 @@
 	position: fixed;
 	top: 0;
 	left: 0;
-	background: #212227;
+	background: black;
 	z-index: 1000;
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;

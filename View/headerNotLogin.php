@@ -6,7 +6,7 @@
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand page-scroll" href="#page-top">Smart Room and Mate Finder</a>
+                <a class="navbar-brand page-scroll" href="#page-top"><i class=" fa fa-search" style="color:#fec503"></i>Smart Room and Mate Finder</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->

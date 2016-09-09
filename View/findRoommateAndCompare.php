@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en" class="no-js">
 	<head>
@@ -14,6 +15,10 @@
 		<link rel="stylesheet" type="text/css" href="css/component.css" />
 		<!-- Modernizr is used for flexbox fallback -->
 		<script src="js/modernizr.custom.js"></script>
+
+		<!--Bootstrap-->
+		<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.css" />
+		<script src="vendor/bootstrap/js/bootstrap.js"></script>
 		
 	</head>
 	<body>
@@ -21,18 +26,14 @@
 		<div class="compare-basket">
 			<button class="action action--button action--compare"><i class="fa fa-check"></i><span class="action__text">Compare</span></button>
 		</div>
+		
+		
 		<!-- Main view -->
 		<div class="view">
 			<!-- Blueprint header -->
-			<header class="bp-header cf">
-				<span></span>
-				<h1>Smart Room and Mate Finder</h1>
-				<nav>
-					<a href="#" class="bp-icon bp-icon-prev" data-info="Home"><span>Home</span></a>
-					<!--a href="" class="bp-icon bp-icon-next" data-info="next Blueprint"><span>Next Blueprint</span></a-->
-					<!--a href="#" class="bp-icon bp-icon-drop" data-info="back to the Codrops article"><span>back to the Codrops article</span></a-->
-					<a href="#" class="bp-icon bp-icon-archive" data-info="Profile"><span>Profile</span></a>
-				</nav>
+			<header class="bp-header cf" id="wow">
+				
+				<h1 style="color:white">Find your roommate</h1>
 			</header>
 			<!-- Product grid -->
 			<section class="grid">

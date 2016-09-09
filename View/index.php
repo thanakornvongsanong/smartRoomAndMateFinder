@@ -13,7 +13,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Agency - Start Bootstrap Theme</title>
+    <title>Smart Room and Mate Finder</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -60,13 +60,13 @@
             <div class="intro-text">
                 <div class="intro-lead-in">Welcome To </div>
                 <div class="intro-heading">Smart Room and Mate Finder</div>
-                <a href="#services" class="page-scroll btn btn-xl">Tell Me More</a>
+                <a href="#services" class="page-scroll btn btn-xl" style="color:#222222">Tell Me More</a>
             </div>
         </div>
     </header>
 
     <!-- Services Section -->
-    <section id="services" style="background-color:gray">
+    <section id="services" style="background-color:#222222">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -97,7 +97,7 @@
     </section>
 
 <!-- Guide Section -->
-    <section id="about"  style="background-color:gray">
+    <section id="about"  style="background-color:#222222">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -237,7 +237,7 @@
                             <div class="clearfix"></div>
                             <div class="col-lg-12 text-center">
                                 <div id="success"></div>
-                                <button type="submit" class="btn btn-xl">Send Message</button>
+                                <button type="submit" class="btn btn-xl" style="color:#222222">Send Message</button>
                             </div>
                         </div>
                     </form>

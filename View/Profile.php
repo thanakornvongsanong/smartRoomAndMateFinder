@@ -37,13 +37,7 @@
 <body id="page-top" class="index">
 
    <?php 
-    //$_SESSION["user"]="gerg";
-            if (isset($_SESSION["user"])) {
                 include "headerLogined.php";
-            }else{
-                include "headerNotLogin.php";
-            }
-
     ?>
 
     <!-- Header -->
@@ -52,7 +46,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Fill your profile data.</h2>
+                    <h2 class="section-heading">Your informations.</h2>
                     <h3 class="section-subheading text-muted">all of these data will use for other people to find you or you find other people</h3>
                 </div>
             </div>

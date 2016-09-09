@@ -1,12 +1,12 @@
 <!-- Navigation -->
-        <nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top" >
+        <nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top" style="background-color:black">
             <div class="container">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header page-scroll">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                         <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
                     </button>
-                    <a class="navbar-brand page-scroll" href="#page-top">Smart Room and Mate Finder</a>
+                    <a class="navbar-brand page-scroll" href="index.php"><i class=" fa fa-search" style="color:#fec503"></i>Smart Room and Mate Finder</a>
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
@@ -15,30 +15,15 @@
                         <li class="hidden">
                             <a href="#page-top"></a>
                         </li>
+                         <li>
+                            <a href="findroommateandcompare.php" >Find Roommate</a>
+                         </li>
                         <li>
-                            <a class="page-scroll" href="index.html">Home</a>
-                        </li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" >Find <span class="caret"></span></a>
-                                <ul class="dropdown-menu " style="background-color:#404040">
-                                        <li><a href="findroommateandcompare.php" >Find Roommate</a></li>
-                                        <li role="separator" class="divider"></li>
-                                        <li><a href="findroomandcompare.php">Find Room</a></li>
-                                </ul>
-                        </li>
+                            <a href="search_room.php">Find Room</a>
+                         </li>
+                        <li ><a href="profile.php">User Name<i class="fa fa-bell" style="color:#fecd1b"></i><span class="badge" style="color:#fecd1b">42</span> </a></li>
                         <li>
-                            <a class="page-scroll" href="request.html">Request</a>
-                        </li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" >User Name <span class="caret"></span></a>
-                                <ul class="dropdown-menu " style="background-color:#404040">
-                                        <li><a href="profile.php" >Profile</a></li>
-                                        <li role="separator" class="divider"></li>
-                                        <li><a href="index.php">Logout</a></li>
-                                </ul>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-bell" style="color:#fecd1b"><span class="badge badge-notify;position:absolute;top:0px;" style="color:#fecd1b">99</span></i></a>
+                            <a href="index.php">Logout</a>
                         </li>
 
                     </ul>
