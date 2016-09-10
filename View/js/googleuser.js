@@ -72,7 +72,7 @@ function initMap() {
             cache: false,
             data: {long: place.geometry.location.lng(), lat: place.geometry.location.lat(), check: $("#check").val()},
             success: function (msg) {
-                alert(markers.length);
+                alert(msg);
                 var users = JSON.parse(msg);
                 for (var i = 0; i < users.length; i++) {
                     var marker2 = new google.maps.Marker({

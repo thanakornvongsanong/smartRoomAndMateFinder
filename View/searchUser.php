@@ -5,10 +5,10 @@ session_start();
 <html>
     <head>
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBqgCoOIkJdpbK7OdgyUss5EC2_2yNTnFE&libraries=places&callback=initMap&language=TH&region=TH"async></script>
-        <script src="googleuser.js" type="text/javascript"></script>
-        <script  type = "text/javascript" src = "jquery-3.1.0.min.js" ></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css">
-        <script src="js/bootstrap.min.js"></script>
+        <script src="js/googleuser.js" type="text/javascript"></script>
+        <script  type = "text/javascript" src = "vendor/jquery/jquery.min.js" ></script>
+        <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+        <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
         <script>
             function send() {
                 var clean_lvl = $('[name="clean_lvl"]:checked').val();
@@ -76,6 +76,7 @@ session_start();
     </head>
     <body >
         <form method="POST">
+
             <h2>Clean</h2>
             <input type="radio" id = "clean" name="clean_lvl" value="5" onclick="send()" > มาก
             <input type="radio" name="clean_lvl" value="4" onclick="send()"> ค่อนข้างมาก

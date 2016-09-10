@@ -393,7 +393,7 @@ class User {
         return $name;
     }
 
-    static function getEducationName($id) {
+    /*static function getEducationName($id) {
         $servername = "192.168.1.14";
         $username = "kawotat";
         $password = "1234";
@@ -417,7 +417,7 @@ class User {
 
         $conn->close();
         return $name;
-    }
+    }*/
 
     static function getJobName($id) {
         $servername = "192.168.1.14";
@@ -436,7 +436,6 @@ class User {
         $sql = "select job_name from jobs where job_id  =" . $id;
 
         $result = mysqli_query($conn, $sql) or die(mysql_error() . "555");
-        ;
         $name = null;
         while ($row = mysqli_fetch_assoc($result)) {
             $name = $row["job_name"];

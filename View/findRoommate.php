@@ -1,6 +1,7 @@
 <?php 
-	session_start(); 
 	include '../model/user.php';
+	session_start(); 
+	
 ?>
 <!DOCTYPE html>
 <html lang="en" class="no-js">
@@ -17,6 +18,9 @@
 		<!-- Modernizr is used for flexbox fallback -->
 		<script src="js/modernizr.custom.js"></script>
 
+		<!--Google Map-->
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBqgCoOIkJdpbK7OdgyUss5EC2_2yNTnFE&libraries=places&callback=initMap&language=TH&region=TH"async></script>
+        		<script src="js/googleuser.js" type="text/javascript"></script>
 
 		<!--JQuery-->
 		<script src="vendor/jquery/jquery.js"></script>
@@ -33,7 +37,7 @@
 
                 var status = $('[name="status"]:checked').val();
 
-                var sex = $('[name="sex"]:checked').val();
+                var sex = $('[name="gender"]:checked').val();
 
                 var smoke = $('[name="smoke"]:checked').val();
 
@@ -90,7 +94,8 @@
 	</head>
 	<body>
 	<?php include "topexpand.php"; ?>
-	
+	<form  method="POST">
+
 		<!-- Compare basket -->
 		<div class="compare-basket">
 			<button class="action action--button action--compare"><i class="fa fa-check"></i><span class="action__text">Compare</span></button>
@@ -111,7 +116,7 @@
 				              		<h4>Clean level</h4>
 				             	 </div>
 				             	 <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-				              		<select name="cleanlevel" id="inputClean" class="form-control" required="required">
+				              		<select name="clean_lvl" id="inputClean" class="form-control" required="required">
 			                                                  <option value="%">Not specified</option>
 			                                                  <option value="5">Very clean</option>
 			                                                  <option value="4">Relatively clean</option>
@@ -126,7 +131,7 @@
 				              		<h4>The frequency of parties</h4>
 				             	 </div>
 				             	 <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-				              		<select name="partylevel" id="inputPartylevel" class="form-control" required="required">
+				              		<select name="party_lvl" id="inputPartylevel" class="form-control" required="required">
 			                                                  <option value="%">Not specified</option>
 			                                                  <option value="5">Everyday</option>
 			                                                  <option value="4">Quite often</option>
@@ -141,7 +146,7 @@
 				              		<h4>Snore level</h4>
 				             	 </div>
 				             	 <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-				              		<select name="snorelevel" id="inputSnorelevel" class="form-control" required="required">
+				              		<select name="snoring" id="inputSnorelevel" class="form-control" required="required">
 			                                                  <option value="%">Not specified</option>
 			                                                  <option value="5">Very Lound</option>
 			                                                  <option value="4">Lound</option>
@@ -156,7 +161,7 @@
 				              		<h4> Smoke level</h4>
 				             	 </div>
 				             	 <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-				              		<select name="smokelevel" id="inputSmokelevel" class="form-control" required="required">
+				              		<select name="smoke" id="inputSmokelevel" class="form-control" required="required">
 			                                                 <option value="%">Not specified</option>
 			                                                  <option value="5">All the time</option>
 			                                                  <option value="4">Quite often</option>
@@ -180,10 +185,22 @@
 				              </div>
 				              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 				              	 <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
+				              		<h4> Gender</h4>
+				             	 </div>
+				             	 <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+				              		<select name="gender" id="gender" class="form-control" required="required">
+			                                                  <option value="%">Not specified</option>
+			                                                  <option value="1">Female</option>
+			                                                   <option value="0">Male</option>
+			                                          </select>
+				              	</div>
+				              </div>
+				              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				              	 <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
 				              		<h4> Rental period</h4>
 				             	 </div>
 				             	 <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-				              		<select name="rentperiod" id="inputRentperiod" class="form-control" required="required">
+				              		<select name="period" id="inputRentperiod" class="form-control" required="required">
 			                                                  <option value="%">Not specified</option>
 			                                                  <option value="3">6-12 Months</option>
 			                                                  <option value="2">3-6 Months</option>
@@ -196,23 +213,11 @@
 				              		<h4> Rental cost</h4>
 				             	 </div>
 				             	 	<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-				              			<input type="number" name="mincost" id="inputMincost" class="form-control" required="required" placeholder="Min" style="font-size:5px">
+				              			<input type="number" name="minrent" id="inputMincost" class="form-control" required="required" placeholder="Min" style="font-size:5px">
 					              	</div>
 					              	<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-					              		<input type="number" name="maxcost" id="inputMaxcost" class="form-control" required="required" placeholder="Max" style="font-size:5px">
+					              		<input type="number" name="maxrent" id="inputMaxcost" class="form-control" required="required" placeholder="Max" style="font-size:5px">
 					              	</div>
-				             	 
-				              </div>
-				              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-				              	 <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
-				              		<h4> Do you have a room yet?</h4>
-				             	 </div>
-				             	 <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-				              		<select name="room" id="inputRoom" class="form-control" required="required">
-			                                                  <option value="0">No</option>
-			                                                  <option value="1">Yes</option>
-			                                          </select>
-				              	</div>
 				              </div>
 				              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 				              	 <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
@@ -233,11 +238,29 @@
 				              		<input type="date" name="movedate" id="inputMovedate" class="form-control" value="" required="required" title="">
 				              	</div>
 				              </div>
+				              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				              	 <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
+				              		<h4>  Location</h4>
+				             	 </div>
+				             	 <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+				              		<input type="text" name="" id="pac-input" class="form-control" placeholder="Enter a location">
+						            <input type="text" class="form-control" id="check" value="3">
+						            <div id="map" style="width:300px;height: 300px" ></div>
+						            <input type ="text" class="form-control" id="name" name="name" >
+						            <input type ="text" class="form-control" id="route" name="route" >
+						            <input type ="text" class="form-control" id="sub_local2" name="sub_local2" >
+						            <input type ="text" class="form-control" id="sub_local" name="sub_local" >
+						            <input type ="text" class="form-control" id="locality" name="locality" >
+						            <input type="hidden" class="form-control" id="lat" name='lat'>
+						            <input type='hidden' class="form-control" id='lng' name='lng'>
+						            <p id="in"></p>
+				              	</div>
+				              </div>
 				              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" align="center">
 		                                            <br>
 		                                             <div class="btn-group btn-group-justified" role="group" aria-label="...">
 							  <div class="btn-group" role="group">
-							    	<button type="button" class="btn " style="background-color:#fed136;color:black;font-weight:bold;">Search</button>
+							    	<button type="submit" class="btn " style="background-color:#fed136;color:black;font-weight:bold;">Search</button>
 							  </div>
 						   </div>
 	                                            </div>
@@ -569,6 +592,7 @@
 		<section class="compare"><!--class="fa fa-remove"-->
 			<button class="action action--close"><i class="fa fa-remove fa-3x" style="color:#fed136"></i><span class="action__text action__text--invisible">Close comparison overlay</span></button>
 		</section>
+	</form>
 		<script src="js/classie.js"></script>
 		<script src="js/main.js"></script>
 	</body>
