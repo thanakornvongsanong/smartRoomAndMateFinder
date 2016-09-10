@@ -37,10 +37,144 @@
 				
 				<h1 style="color:white">Find your roommate</h1>
 			</header>
-			<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-				
+			<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+				<ul id="nav-tabs-wrapper" class="nav nav-tabs nav-pills nav-stacked well" >
+				              <h3 class="text-center">PERSONAL INFORMATIONS.</h3><br>
+				              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				              	 <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
+				              		<h4>Clean level</h4>
+				             	 </div>
+				             	 <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+				              		<select name="cleanlevel" id="inputClean" class="form-control" required="required">
+			                                                  <option value="%">Not specified</option>
+			                                                  <option value="5">Very clean</option>
+			                                                  <option value="4">Relatively clean</option>
+			                                                  <option value="3">Clean medium</option>
+			                                                  <option value="2">Quite not clean</option>
+			                                                  <option value="1">Not clean</option>
+		                                          	</select>
+				              	</div>
+				              </div>
+				              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				              	 <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
+				              		<h4>The frequency of parties</h4>
+				             	 </div>
+				             	 <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+				              		<select name="partylevel" id="inputPartylevel" class="form-control" required="required">
+			                                                  <option value="%">Not specified</option>
+			                                                  <option value="5">Everyday</option>
+			                                                  <option value="4">Quite often</option>
+			                                                  <option value="3">Sometime</option>
+			                                                  <option value="2">Rarely</option>
+			                                                  <option value="1">Never</option>
+			                                          </select>
+				              	</div>
+				              </div>
+				              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				              	 <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
+				              		<h4>Snore level</h4>
+				             	 </div>
+				             	 <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+				              		<select name="snorelevel" id="inputSnorelevel" class="form-control" required="required">
+			                                                  <option value="%">Not specified</option>
+			                                                  <option value="5">Very Lound</option>
+			                                                  <option value="4">Lound</option>
+			                                                  <option value="3">Middle</option>
+			                                                  <option value="2">Low</option>
+			                                                  <option value="1">Non-snoring</option>
+			                                          </select>
+				              	</div>
+				              </div>
+				              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				              	 <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
+				              		<h4> Smoke level</h4>
+				             	 </div>
+				             	 <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+				              		<select name="smokelevel" id="inputSmokelevel" class="form-control" required="required">
+			                                                 <option value="%">Not specified</option>
+			                                                  <option value="5">All the time</option>
+			                                                  <option value="4">Quite often</option>
+			                                                  <option value="3">Sometime</option>
+			                                                  <option value="2">Rarely</option>
+			                                                  <option value="1">Never</option>
+			                                          </select>
+				              	</div>
+				              </div>
+				              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				              	 <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
+				              		<h4> Status</h4>
+				             	 </div>
+				             	 <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+				              		<select name="status" id="inputStatus" class="form-control" required="required">
+			                                                  <option value="%">Not specified</option>
+			                                                  <option value="1">Single</option>
+			                                                   <option value="0">Married</option>
+			                                          </select>
+				              	</div>
+				              </div>
+				              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				              	 <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
+				              		<h4> Rental period</h4>
+				             	 </div>
+				             	 <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+				              		<select name="rentperiod" id="inputRentperiod" class="form-control" required="required">
+			                                                  <option value="%">Not specified</option>
+			                                                  <option value="3">6-12 Months</option>
+			                                                  <option value="2">3-6 Months</option>
+			                                                  <option value="1">1-3 Months</option>
+			                                          </select>
+				              	</div>
+				              </div>
+				              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				              	 <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
+				              		<h4> Rental cost</h4>
+				             	 </div>
+				             	 	<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+				              			<input type="number" name="mincost" id="inputMincost" class="form-control" required="required" placeholder="Min" style="font-size:5px">
+					              	</div>
+					              	<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+					              		<input type="number" name="maxcost" id="inputMaxcost" class="form-control" required="required" placeholder="Max" style="font-size:5px">
+					              	</div>
+				             	 
+				              </div>
+				              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				              	 <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
+				              		<h4> Do you have a room yet?</h4>
+				             	 </div>
+				             	 <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+				              		<select name="room" id="inputRoom" class="form-control" required="required">
+			                                                  <option value="0">No</option>
+			                                                  <option value="1">Yes</option>
+			                                          </select>
+				              	</div>
+				              </div>
+				              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				              	 <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
+				              		<h4>  Do you want to feed  pets in room?</h4>
+				             	 </div>
+				             	 <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+				              		<select name="animal" id="inputAnimal" class="form-control" required="required">
+			                                                  <option value="0">No</option>
+			                                                  <option value="1">Yes</option>
+			                                          </select>
+				              	</div>
+				              </div>
+				              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				              	 <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
+				              		<h4>  Approx. move in date</h4>
+				             	 </div>
+				             	 <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+				              		<input type="date" name="movedate" id="inputMovedate" class="form-control" value="" required="required" title="">
+				              	</div>
+				              </div>
+				              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" align="center">
+		                                            <br>
+		                                              <button type="submit" class="btn btn-success">Search</button>
+	                                            </div>
+				</ul>
 			</div>
-			<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+				
+			<div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
 				<!-- Product grid -->
 			<section class="grid">
 				<!-- Products -->
