@@ -16,7 +16,7 @@
                             <a href="#page-top"></a>
                         </li>
                          <li>
-                            <a href="findroommateandcompare.php" >Find Roommate</a>
+                            <a href="findroommate.php" >Find Roommate</a>
                          </li>
                         <li>
                             <a href="search_room.php">Find Room</a>

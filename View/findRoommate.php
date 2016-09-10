@@ -1,4 +1,7 @@
-<?php session_start(); ?>
+<?php 
+	session_start(); 
+	include '../model/user.php';
+?>
 <!DOCTYPE html>
 <html lang="en" class="no-js">
 	<head>
@@ -21,10 +24,73 @@
 		<!--Bootstrap-->
 		<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.css" />
 		<script src="vendor/bootstrap/js/bootstrap.js"></script>
+	<script>
+            function send() {
+                var clean_lvl = $('[name="clean_lvl"]:checked').val();
+                var party_lvl = $('[name="party_lvl"]:checked').val();
 
+                var snoring = $('[name="snoring"]:checked').val();
+
+                var status = $('[name="status"]:checked').val();
+
+                var sex = $('[name="sex"]:checked').val();
+
+                var smoke = $('[name="smoke"]:checked').val();
+
+                var period = $('[name="period"]:checked').val();
+
+                var min_rent = $("#minrent").val();
+                var max_rent = $("#maxrent").val();
+
+                var min_age = $("#minage").val();
+
+                var max_age = $("#maxage").val();
+
+                var locality = $("#locality").val();
+
+                $.ajax({
+                    type: "POST",
+                    url: "search.php",
+                    cache: false,
+                    data: {clean_lvl: clean_lvl, party_lvl: party_lvl, snoring: snoring, status: status, sex: sex, smoke: smoke, period: period, min_rent: min_rent, max_rent: max_rent, min_age: min_age, max_age: max_age, city: locality},
+                    success: function (msg) {
+                        $("#in").html(msg);
+                    }
+
+                });
+            }
+            function getDetail(id) {
+                $("#iddd").val(id.id);
+                $.ajax({
+                    type: "POST",
+                    url: "getDetail.php",
+                    cache: false,
+                    data: {id: id.id},
+                    success: function (msg) {
+                        $("#in2").html(msg);
+                    }
+                });
+            }
+            function sendInvite(input) {
+                var message = "สวัสดีเราสนใจจะ สนใจมาแชร์ห้อง ร่วมกันไหม ถ้าสนใจ คลิ้กนี่เลย ";
+                var partylink = "<a href=\"joinparty.php?id=<?php echo $_SESSION["user"]->userid; ?>" + "&id2=" + input + "\">Join Room</a>";
+                alert(message + partylink);
+                $.ajax({
+                type: "POST",
+                        url: "sendChat.php",
+                        cache: false,
+                        data: {user_id: input, message: message + partylink},
+                                success: function (msg) {
+                                    alert(msg);
+                                    }
+                        });
+                }
+            
+        </script>
 	</head>
 	<body>
 	<?php include "topexpand.php"; ?>
+	
 		<!-- Compare basket -->
 		<div class="compare-basket">
 			<button class="action action--button action--compare"><i class="fa fa-check"></i><span class="action__text">Compare</span></button>

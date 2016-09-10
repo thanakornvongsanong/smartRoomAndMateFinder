@@ -23,19 +23,17 @@
 
 		<!-- Bootstrap Core JavaScript -->
 		<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-		
+
 	</head>
 	<body>
 
 		<div class="menu-wrap">
 				<nav class="menu" style="background-color:black">
 					<div class="icon-list">
-						<a href="#"><i class="fa fa-fw fa-star-o"></i><span>Favorites</span></a>
-						<a href="#"><i class="fa fa-fw fa-bell-o"></i><span>Alerts</span></a>
-						<a href="#"><i class="fa fa-fw fa-envelope-o"></i><span>Messages</span></a>
-						<a href="#"><i class="fa fa-fw fa-comment-o"></i><span>Comments</span></a>
-						<a href="#"><i class="fa fa-fw fa-bar-chart-o"></i><span>Analytics</span></a>
-						<a href="#"><i class="fa fa-fw fa-newspaper-o"></i><span>Reading List</span></a>
+						<a href="index.php"><i class="fa fa-home fa-2x"></i><span>Home</span></a>
+						<a href="findroom.php"><i class="fa fa-search fa-2x"></i><span>Find Room</span></a>
+						<a href="username.php"><i class="fa fa-user fa-2x"></i><span>Username</span></a>
+						<a href="index.php"><i class="fa fa-sign-out fa-2x"></i><span>Logout</span></a>
 					</div>
 				</nav>
 			</div>
