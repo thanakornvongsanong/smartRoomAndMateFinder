@@ -24,6 +24,7 @@
 
 	</head>
 	<body>
+	<?php include "topexpand.php"; ?>
 		<!-- Compare basket -->
 		<div class="compare-basket">
 			<button class="action action--button action--compare"><i class="fa fa-check"></i><span class="action__text">Compare</span></button>
@@ -500,7 +501,7 @@
 		</div><!-- /view -->
 		<!-- product compare wrapper -->
 		<section class="compare"><!--class="fa fa-remove"-->
-			<button class="action action--close"><i class="fa fa-remove" style="color:black"></i><span class="action__text action__text--invisible">Close comparison overlay</span></button>
+			<button class="action action--close"><i class="fa fa-remove fa-3x" style="color:#fed136"></i><span class="action__text action__text--invisible">Close comparison overlay</span></button>
 		</section>
 		<script src="js/classie.js"></script>
 		<script src="js/main.js"></script>
