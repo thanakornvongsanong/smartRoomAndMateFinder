@@ -16,10 +16,17 @@
 		<!--[if IE]>
   		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
+		<!-- Bootstrap Core CSS -->
+    		<link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+    		<!-- jQuery -->
+		 <script src="vendor/jquery/jquery.min.js"></script>
+
+		<!-- Bootstrap Core JavaScript -->
+		<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
 	</head>
 	<body>
-		<div class="container">
-			<div class="menu-wrap">
+
+		<div class="menu-wrap">
 				<nav class="menu" style="background-color:black">
 					<div class="icon-list">
 						<a href="#"><i class="fa fa-fw fa-star-o"></i><span>Favorites</span></a>
@@ -31,9 +38,10 @@
 					</div>
 				</nav>
 			</div>
+			
 			<button class="menu-button" id="open-button"></button>
 			
-		</div><!-- /container -->
+			
 		<script src="js/classieMenu.js"></script>
 		<script src="js/mainMenu.js"></script>
 	</body>
