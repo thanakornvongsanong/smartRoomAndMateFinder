@@ -49,19 +49,19 @@ elseif($user->snoring==1){
 }
 echo "การดูดบุหรี่: ";
         if($user->smoke=5){
-  echo "สะอาดมาก"."<br>";
+  echo "สูบบุหรี่หนัก"."<br>";
 }
 elseif($user->smoke==4){
-   echo "ค่อนข้างสะอาด"."<br>";
+   echo "สูบบุหรี่ค่อนข้างหนัก"."<br>";
 }
 elseif($user->smoke==3){
    echo "ปานกลาง"."<br>";
 }
 elseif($user->smoke==2){
-   echo "ค่อนข้างรก"."<br>";
+   echo "ไม่ค่อยสูบบุหรี่"."<br>";
 }
 elseif($user->smoke==1){
-   echo "รกมาก"."<br>";
+   echo "ไม่สูบบุหรี่"."<br>";
 }
 echo "สถานะ: ";
 if($user->status=="single"){

@@ -81,7 +81,11 @@
                         <i class="glyphicon glyphicon-user"></i>
                     </span>
                     <h4 class="service-heading" style="color:white;font-weight: bold;font-size: 170%;">Find Roommate</h4>
-                    <p style="color:white;font-size: 130%;">You can find roommates who meet your requirements.</p>
+                    <p style="color:white;font-size: 130%;">Easy ways to find your roommate. 
+                        you can find roommates who meet you requirement in Bangkok with the help of powerful search.
+                        And the result was close to where you need it most.
+                        Just join us...
+                    </p>
                 </div>
                 <div class="col-md-6">
                     <span class="fa-stack fa-5x">
@@ -89,7 +93,11 @@
                         <i class="glyphicon glyphicon-home"></i>
                     </span>
                     <h4 class="service-heading" style="color:white;font-weight: bold;font-size: 170%;">Find Room</h4>
-                    <p style="color:white;font-size: 130%;">You can find room who meet your requirements.</p>
+                    <p style="color:white;font-size: 130%;">Find empty room nearby.
+                        you can find room who meet you requirement in Bangkok. 
+                        We pull information of rooms from registration.
+                        And make it choice for your decide choosing empty room.
+                        Find room now!!.</p>
                 </div>
                 
             </div>
@@ -294,3 +302,12 @@
 </body>
 
 </html>
+
+
+<?php 
+
+
+
+
+
+ ?>

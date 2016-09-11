@@ -602,6 +602,84 @@ class User {
         $conn->close();
         return $name;
     }
+    function easyread(){
+        
+if( $this->gender=="f"){
+  $this->gender="Female" ;
+}
+else{
+     $this->gender="Male" ;
+}
+
+if( $this->clean_lvl==5){
+   $this->clean_lvl="สะอาดมาก";
+}
+elseif( $this->clean_lvl==4){
+   $this->clean_lvl= "ค่อนข้างสะอาด";
+}
+elseif( $this->clean_lvl==3){
+   $this->clean_lvl= "ปานกลาง";
+}
+elseif( $this->clean_lvl==2){
+   $this->clean_lvl="ค่อนข้างรก";
+}
+elseif( $this->clean_lvl==1){
+   $this->clean_lvl= "รกมาก";
+}
+
+if( $this->snoring==5){
+  $this->snoring= "กรนบ่อยครั้ง";
+}
+elseif( $this->snoring==4){
+    $this->snoring= "กรนค่อนข้างบ่อย";
+}
+elseif( $this->snoring==3){
+   $this->snoring= "ปานกลาง";
+}
+elseif( $this->snoring==2){
+   $this->snoring= "กรนน้อย";
+}
+elseif( $this->snoring==1){
+   $this->snoring="ไม่กรน";
+}
+        if( $this->smoke==5){
+  $this->smoke= "สะอาดมาก";
+}
+elseif( $this->smoke==4){
+   $this->smoke="ค่อนข้างสะอาด";
+}
+elseif( $this->smoke==3){
+   $this->smoke= "ปานกลาง";
+}
+elseif( $this->smoke==2){
+    $this->smoke= "ค่อนข้างรก";
+}
+elseif( $this->smoke==1){
+    $this->smoke= "รกมาก";
+}
+if( $this->status=="single"){
+   $this->status= "โสด";
+}
+elseif( $this->status=="marry"){
+    $this->status= "แต่งงานแล้ว";
+}
+ if( $this->party_lvl==5){
+   $this->party_lvl= "บ่อยครั้ง";
+}
+elseif( $this->party_lvl==4){
+   $this->party_lvl="ค่อนข้างบ่อย";
+}
+elseif( $this->party_lvl==3){
+   $this->party_lvl= "ปานกลาง";
+}
+elseif( $this->party_lvl==2){
+   $this->party_lvl="นานๆที";
+}
+elseif( $this->party_lvl==1){
+    $this->party_lvl= "ไม่เลย";
+}
+return  $this;
+    }
    }
 ?>
 

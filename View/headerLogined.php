@@ -21,7 +21,7 @@
                         <li>
                             <a href="search_room.php">Find Room</a>
                          </li>
-                        <li ><a href="profile.php">User Name<i class="fa fa-bell" style="color:#fecd1b"></i><span class="badge" style="color:#fecd1b">42</span> </a></li>
+                        <li ><a href="username.php">User Name<i class="fa fa-bell" style="color:#fecd1b"></i><span class="badge" style="color:#fecd1b">42</span> </a></li>
                         <li>
                             <a href="index.php">Logout</a>
                         </li>

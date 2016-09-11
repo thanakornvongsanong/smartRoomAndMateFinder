@@ -17,6 +17,7 @@
 
 	// the compare basket
 	function CompareBasket() {
+
 		this.el = document.querySelector('.compare-basket');
 		this.compareCtrl = this.el.querySelector('.action--compare');
 		this.compareWrapper = document.querySelector('.compare'),
@@ -39,6 +40,7 @@
 	}
 
 	CompareBasket.prototype.add = function(item) {
+		
 		// check limit
 		if( this.isFull() ) {
 			return false;

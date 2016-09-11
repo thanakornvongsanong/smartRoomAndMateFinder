@@ -37,7 +37,7 @@ session_start();
                     type: "POST",
                     url: "search.php",
                     cache: false,
-                    data: {clean_lvl: clean_lvl, party_lvl: party_lvl, snoring: snoring, status: status, sex: sex, smoke: smoke, period: period, min_rent: min_rent, max_rent: max_rent, min_age: min_age, max_age: max_age, city: locality},
+                    data: {clean_lvl: clean_lvl, party_lvl: party_lvl, snoring: snoring, status: status, sex: sex, smoke: smoke, period: period, min_rent: min_rent, max_rent: max_rent, min_age: min_age, max_age: max_age, city: locality,movedate:$("#movedate").val() },
                     success: function (msg) {
                         $("#in").html(msg);
                     }
@@ -70,7 +70,7 @@ session_start();
                                     }
                         });
                 }
-            
+
         </script>
 
     </head>
@@ -86,7 +86,7 @@ session_start();
             <input type="radio" name="clean_lvl" value="%" onclick="send()" checked> any
             <br>
             <h2>Party Time</h2>
-            <input type="radio" name="party_lvl" value="5" checked> มาก
+            <input type="radio" name="party_lvl" value="5" > มาก
             <input type="radio" name="party_lvl" value="4"> ค่อนข้างมาก
             <input type="radio" name="party_lvl" value="3"> ปานกลาง
             <input type="radio" name="party_lvl" value="2"> น้อย
@@ -94,7 +94,7 @@ session_start();
             <input type="radio" name="party_lvl" value="%" checked> any
             <br>
             <h2>กรน</h2>
-            <input type="radio" name="snoring" value="5" checked> มาก
+            <input type="radio" name="snoring" value="5" > มาก
             <input type="radio" name="snoring" value="4"> ค่อนข้างมาก
             <input type="radio" name="snoring" value="3"> ปานกลาง
             <input type="radio" name="snoring" value="2"> น้อย
@@ -102,7 +102,7 @@ session_start();
             <input type="radio" name="snoring" value="%" checked> any
             <br>
             <h2>Smoking</h2>
-            <input type="radio" name="smoke" value="5" checked> มาก
+            <input type="radio" name="smoke" value="5" > มาก
             <input type="radio" name="smoke" value="4"> ค่อนข้างมาก
             <input type="radio" name="smoke" value="3"> ปานกลาง
             <input type="radio" name="smoke" value="2"> น้อย
@@ -124,7 +124,7 @@ session_start();
             <input type="radio" name="period" value="2" > 3-6 Mounth
             <input type="radio" name="period" value="3" > 6-12 Mounth
             <input type="radio" name="period" value="4" > 6-12 Mounth
-            <input type="radio" name="period" value="%"checked > any
+            <input type="radio" name="period" value="%" checked > any
             <br>
             <h2>Rent Cost</h2>
             <input  type="text" name ="min_rent" value="2000"id="minrent" > Min Rent
@@ -133,6 +133,8 @@ session_start();
             <h2>Age</h2>
             <input  type="text" name ="min_age" value="16" id="minage"> Min age
             <input  type="text" name ="max_age" value="99" id="maxage"> Max age
+            <br>
+            Moving Date <input type="date" name="movedate" id="movedate" class="form-control" value="" required="required" title="">
             <br>
             <input id="pac-input" class="controls" type="text"
                    placeholder="Enter a location">
@@ -146,13 +148,13 @@ session_start();
             <input type="hidden" id="lat" name='lat'>
             <input type='hidden' id='lng' name='lng'>
             <p id="in"></p>
-
+    
 
 
         </form>
         <button onclick="send()">Refresh</button>
         <p id="in"></p>
-
+        
         <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">

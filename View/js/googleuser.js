@@ -2,6 +2,7 @@
 // This example requires the Places library. Include the libraries=places
 // parameter when you first load the API. For example:
 // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
+
 var map = null;
 var markers = [];
 function initMap() {
@@ -68,10 +69,11 @@ function initMap() {
 
         $.ajax({
             type: "POST",
-            url: "Tod2.php",
+            url: "../Model/Tod2.php",
             cache: false,
             data: {long: place.geometry.location.lng(), lat: place.geometry.location.lat(), check: $("#check").val()},
             success: function (msg) {
+                alert($("#check").val());
                 alert(msg);
                 var users = JSON.parse(msg);
                 for (var i = 0; i < users.length; i++) {

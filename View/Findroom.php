@@ -1,426 +1,292 @@
+<?php 
+  include '../model/room.php';
+  session_start(); 
+  
+?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Find Room</title>
+    <meta name="description" content="Blueprint: A basic responsive product grid layout with comparison functionality" />
+    <meta name="keywords" content="blueprint, template, html, css, javascript, grid, layout, effect, product comparison" />
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/demo.css" />
+    <link rel="stylesheet" type="text/css" href="css/component.css" />
+    <!-- Modernizr is used for flexbox fallback -->
+    <script src="js/modernizr.custom.js"></script>
 
-<head>
+    <!--Google Map-->
+    
+            
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <!--JQuery-->
+    <script src="vendor/jquery/jquery.js"></script>
 
-    <title>Mate Finder</title>
+    <!--Bootstrap-->
+    <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.css" />
+    <script src="vendor/bootstrap/js/bootstrap.js"></script>
+  <script>
+            function send(){
+                
+                var petallow =$("#petallow").val(); 
+              
+                var minsize = $("#minsize").val();
+                var maxsize = $("#maxsize").val();
+                var maxrent = $("#maxrent").val();
+                var minrent = $("#minrent").val();
+                var maxelec = $("#maxelec").val();
+                var minelec = $("#minelec").val();
+                var minwater =$("#minwater").val();
+                var maxwater = $("#maxwater").val();
+                var roomtype =$("#room_type").val();
+                var maxmember =$("#maxmember").val();
+                var area = $("#sub_local").val();
+                var city = $("#locality").val();
+                 $.ajax({
+                    type: "POST",
+                    url: "searchRoomCon.php",
+                    cache: false,
+                    data: {city:city,petallow: petallow,minsize:minsize,maxsize:maxsize,maxrent:maxrent,minrent:minrent,maxelec:maxelec,minelec:minelec,maxwater:maxwater,minwater:minwater,roomtype:roomtype,maxmember:maxmember,area:area},
+                    success: function (msg) {
+                        
+                        $("#in2").html(msg);
+                    }
 
-    <!-- Bootstrap Core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+                });
+            }
+        </script>
+  </head>
+  <body>
+  <?php include "topexpand.php"; ?>
+    <!-- Compare basket -->
+    <div class="compare-basket">
+      <button class="action action--button action--compare"><i class="fa fa-check"></i><span class="action__text">Compare</span></button>
+    </div>
 
-    <!-- Custom Fonts -->
-    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+    <!-- Main view -->
+    <div class="view">
+      <!-- Blueprint header -->
 
-    <!-- Google Maps API -->
-    <script src="http://maps.googleapis.com/maps/api/js"></script>
-    <script>
-        function initialize() {
-          var mapProp = {
-            center:new google.maps.LatLng(13.651762, 100.494850),
-            zoom:15,
-            mapTypeId:google.maps.MapTypeId.ROADMAP
-        };
-        var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
-    }
-    google.maps.event.addDomListener(window, 'load', initialize);
-</script>
-
-<!-- Theme CSS -->
-<link href="css/agency.min.css" rel="stylesheet">
-
-<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-        <![endif]-->
-
-    </head>
-
-    <body id="page-top" class="index">
-
-        <!-- Navigation -->
-        <nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top">
-            <div class="container">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header page-scroll">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                        <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
-                    </button>
-                    <a class="navbar-brand page-scroll" href="#page-top">Mate Finder</a>
-                </div>
-
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li class="hidden">
-                            <a href="#page-top"></a>
-                        </li>
-                        <li>
-                            <a class="page-scroll" href="index.html">Home</a>
-                        </li>
-                        <li class="dropdown-content active">
-                            <a class="page-scroll" href="Findfriend.html">Find Friend</a>
-                        </li>
-                        <li class="dropdown-content">
-                            <a class="page-scroll" href="Findroom.html">Find Room</a>
-                        </li>
-                        <li>
-                            <a class="page-scroll" href="request.html">Request</a>
-                        </li>
-                        <li>
-                            <a class="page-scroll" href="profile.html">Profile</a>
-                        </li>
-                        <li>
-                            <a class="page-scroll" href="index.html">Logout</a>
-                        </li>
-                    </ul>
-                </div>
-                <!-- /.navbar-collapse -->
-            </div>
-            <!-- /.container-fluid -->
-        </nav>
-
-        <!-- Header -->
-
-        <section id="portfolio" class="bg-light-gray">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12 text-center">
-                        <h2 class="section-heading">Find Room.</h2>
-                        <h3 class="section-subheading text-muted">Entry data for searching.</h3>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="row">
-                        <div class="col-lg-12 text-center">
-                            <form>
-                                <div  class="col-lg-offset-2 col-lg-8">
-                                    <div class="panel panel-default">
-
-                                        <br><br>
-                                        <div class="form-group">  
-                                            <div class="row">
-                                                <div  class="col-lg-6 text-left " style="padding-left: 0.5cm; padding-right: 0.5cm; padding-top: 1.0cm">
-                                                    <div  class="col-lg-12">
-                                                     District
-                                                 </div>
-                                                 <div  class="col-lg-12">
-                                                    <select class="form-control">
-                                                       <option value="dist0">Not specified</option> 
-                                                       <option value="dist1">Phra Nakhon District</option> 
-                                                       <option value="dist2">Bang Bon District</option>
-                                                       <option value="dist3">Bang Kapi District</option>
-                                                       <option value="dist4">Bang Khae District</option>
-                                                       <option value="dist5">Bang Khen District</option> 
-                                                       <option value="dist6">Bang Kho Laem District</option>
-                                                       <option value="dist7">Bang Khun Thian District</option>
-                                                       <option value="dist8">Bang Na District</option>
-                                                       <option value="dist9">Bang Phlat District</option> 
-                                                       <option value="dist10">Bang Rak District</option>
-                                                       <option value="dist11">Bang Sue District</option>
-                                                       <option value="dist12">Bangkok Noi District</option>
-                                                       <option value="dist13">Bangkok Yai District</option> 
-                                                       <option value="dist14">Bueng Kum District</option>
-                                                       <option value="dist15">Chatuchak District</option>
-                                                       <option value="dist16">Chom Thong District</option>
-                                                       <option value="dist17">Din Daeng District</option> 
-                                                       <option value="dist18">Don Mueang District</option>
-                                                       <option value="dist19">Dusit District</option>
-                                                       <option value="dist20">Huai Khwang District</option>
-                                                       <option value="dist21">Khan Na Yao District</option> 
-                                                       <option value="dist22">Khlong Sam Wa District</option>
-                                                       <option value="dist23">Khlong San District</option>
-                                                       <option value="dist24">Khlong Toei District</option>
-                                                       <option value="dist25">Lak Si District</option> 
-                                                       <option value="dist26">Lat Krabang District</option>
-                                                       <option value="dist27">Lat Phrao District</option>
-                                                       <option value="dist28">Min Buri District</option>
-                                                       <option value="dist29">Nong Chok District</option> 
-                                                       <option value="dist30">Nong Khaem District</option>
-                                                       <option value="dist31">Pathum Wan District</option>
-                                                       <option value="dist32">Phasi Charoen District</option>
-                                                       <option value="dist33">Phaya Thai District</option> 
-                                                       <option value="dist34">Phra Khanong District</option>
-                                                       <option value="dist35">Pom Prap Sattru Phai District</option>
-                                                       <option value="dist36">Prawet District</option>
-                                                       <option value="dist37">Rat Burana District</option> 
-                                                       <option value="dist38">Ratchathewi District</option>
-                                                       <option value="dist39">Sai Mai District</option>
-                                                       <option value="dist40">Samphanthawong District</option>
-                                                       <option value="dist41">Saphan Sung District</option> 
-                                                       <option value="dist42">Sathon District</option>
-                                                       <option value="dist43">Suan Luang District</option>
-                                                       <option value="dist44">Taling Chan District</option>
-                                                       <option value="dist45">Thawi Watthana District</option> 
-                                                       <option value="dist46">Thon Buri District</option>
-                                                       <option value="dist47">Thung Khru District</option>
-                                                       <option value="dist48">Wang Thonglang District</option>
-                                                       <option value="dist48">Vadhana District</option>
-                                                       <option value="dist48">Yan Nawa District</option>
-                                                   </select>
-                                               </div>
-                                               <div  class="col-lg-12">
-                                                 Rent Cost (Thai Bath)
-                                             </div>
-
-                                             <div  class="col-lg-12">
-                                                <select class="form-control">
-                                                   <option value="dist0">Not specified</option> 
-                                                   <option value="dist1">less than 5,000</option> 
-                                                   <option value="dist2">5,001 - 7,500</option>
-                                                   <option value="dist3">7,501 - 10,000</option>
-                                                   <option value="dist3">More than 10,000</option>
-                                               </select>
-                                           </div>
-
-                                       </div>
-
-
-                                       <div  class="col-lg-6 text-left" style="padding-left: 0.5cm; padding-right: 0.5cm; padding-top: 1.0cm">
-                                        <div  class="col-lg-12">
-                                         Sub-District
-                                     </div>
-                                     <div  class="col-lg-12">
-                                        <select class="form-control">
-                                          <option value="subdist0">Not specified</option>
-                                          <option value="subdist1">Phra Borom Maha Ratchawang</option> 
-                                          <option value="subdist2">Wang Burapha Phirom</option>
-                                          <option value="subdist3">Wat Ratchabophit</option>
-                                          <option value="subdist4">Samran Rat</option>
-                                          <option value="subdist5">San Chao Pho Suea</option> 
-                                          <option value="subdist6">Sao Chingcha</option>
-                                          <option value="subdist7">Bowon Niwet</option>
-                                          <option value="subdist8">Talat Yot</option>
-                                          <option value="subdist9">Chana Songkhram</option> 
-                                          <option value="subdist10">Ban Phan Thom</option>
-                                          <option value="subdist11">Bang Khun Phrom</option>
-                                          <option value="subdist12">Wat Sam Phraya</option>
-                                      </select>
-                                  </div>
-
-                                  <div  class="col-lg-12">
-                                    Rent Period (Month)
-                                </div>
-                                <div  class="col-lg-12">
-                                 <select class="form-control">
-                                  <option value="subdist0">Not specified</option>
-                                  <option value="subdist1">1</option> 
-                                  <option value="subdist2">2</option>
-                                  <option value="subdist3">3</option>
-                                  <option value="subdist4">4</option>
-                                  <option value="subdist1">5</option> 
-                                  <option value="subdist2">6</option>
-                                  <option value="subdist3">7</option>
-                                  <option value="subdist4">8</option>
-                                  <option value="subdist1">9</option> 
-                                  <option value="subdist2">10</option>
-                                  <option value="subdist3">11</option>
-                                  <option value="subdist4">12</option>
-                                  <option value="subdist4">More than 12</option>
-                              </select>
+      <header class="bp-header cf text-center" >
+        <h1 style="color:white">Find your room</h1>
+      </header>
+      <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4" style="color:white;background-color:#24252A;border: 5px solid;border-color:#fed136;border-radius:30px" >
+        <ul >
+                      <h3 class="text-center">ROOM  INFORMATIONS.</h3><br>
+                      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                         <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
+                          <h4>Room size (square meter)</h4>
+                       </div>
+                          <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                            <input type="number" name="minsize" id="minsize" class="form-control" required="required" placeholder="Min" value="1" min="1" max="100" style="font-size:5px">
                           </div>
-
+                          <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                            <input type="number" name="maxsize" id="maxsize" class="form-control" required="required" value="325" min="1" max="325" placeholder="Max" style="font-size:5px">
+                          </div>
+                      </div>
+                       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                         <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
+                          <h4>Rent cost</h4>
+                       </div>
+                          <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                            <input type="number" name="minrent" id="minrent" class="form-control" required="required" placeholder="Min" value="1" min="1" max="10000" style="font-size:5px">
+                          </div>
+                          <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                            <input type="number" name="maxrent" id="maxrent" class="form-control" required="required" value="10000" min="1" max="10000" placeholder="Max" style="font-size:5px">
+                          </div>
+                      </div>
+                      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                         <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
+                          <h4> Animal allowable</h4>
+                       </div>
+                       <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                          <select name="petallow" id="petallow" class="form-control" required="required">
+                                                        <option value="0">Not Allow</option>
+                                                        <option value="1">Allow</option>
+                                                         
+                                                </select>
+                        </div>
+                      </div>
+                      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                         <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
+                          <h4>Electronic cost</h4>
+                       </div>
+                          <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                            <input type="number" name="minelec" id="minelec" class="form-control" required="required" placeholder="Min" value="1" min="1" max="100" style="font-size:5px">
+                          </div>
+                          <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                            <input type="number" name="maxelec" id="maxelec" class="form-control" required="required" value="100" min="1" max="100" placeholder="Max" style="font-size:5px">
+                          </div>
+                      </div>
+                      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                         <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
+                          <h4>Water cost</h4>
+                       </div>
+                          <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                            <input type="number" name="minwater" id="minwater" class="form-control" required="required" placeholder="Min" value="1" min="1" max="100" style="font-size:5px">
+                          </div>
+                          <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                            <input type="number" name="maxwater" id="maxwater" class="form-control" required="required" value="100" min="1" max="100" placeholder="Max" style="font-size:5px">
+                          </div>
+                      </div>
+                      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                         <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
+                          <h4>Room type</h4>
+                       </div>
+                       <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                          <select name="room_type" id="room_type" class="form-control" required="required">
+                                <option value="condo">Condo</option>
+                                <option value="renthouse">Rental house</option>
+                                <option value="dormitory">Dormitory</option>
+                                <option value="appartment">Apartment</option>
+                                <option value="flat">Flat</option>
+                                <option value="mansion">Mansion</option>
+                        </select>
+                      </div>
+                      </div>
+                      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                         <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
+                          <h4>Max member</h4>
+                       </div>
+                          <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                            <input type="number" name="maxmember" id="maxmember" class="form-control" required="required" value="4" min="1" max="15" placeholder="Max" style="font-size:5px">
+                          </div>
+                      </div>
+                      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                         <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
+                          <h4>  Location</h4>
+                       </div>
+                       <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                          <input type="text" name="locality" id="pac-input" class="form-control" placeholder="Enter a location">
+                        </div>
+                      </div>
+                      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                         <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
+                          <h4>  Location range</h4>
+                       </div>
+                       <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                          <div class="input-group">
+                  <input type="text" name="locality" id="check" class="form-control" placeholder="Enter location range" value="3">
+                  <span class="input-group-addon" id="basic-addon1">Kilometer</span>
+              </div>
+                        </div>
+                      </div>
+                      <!--Google Map-->
+                      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                         <div id="map" style="width:370px;height: 300px" ></div>
+                         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBqgCoOIkJdpbK7OdgyUss5EC2_2yNTnFE&libraries=places&callback=initMap&language=TH&region=TH"async></script>
+                         <script src="js/googleuser.js" type="text/javascript"></script>
+                         <br>
+                      </div>
+                      <!--Result of Google Map-->
+                      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                          <input type ="text" class="form-control" id="name" name="name" >
+                          <input type ="text" class="form-control" id="locality" name="locality" >
+                          <input type ="text" class="form-control" id="sub_local" name="sub_local" >
+                          <input type ="text" class="form-control" id="sub_local2" name="sub_local2" >
+                          <input type ="text" class="form-control" id="route" name="route" >
+                          <input type="hidden" class="form-control" id="lat" name='lat'>
+                           <input type='hidden' class="form-control" id='lng' name='lng'>
                       </div>
 
-                  </div>
-
-              </div>
-
-              <div class="form-group">  
-                <div class="row">
-                    <div  class="col-lg-12 text-center ">
-                        <div  class="col-lg-12">
-                            Date Moving 
+                      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                          
+                      </div>
+                      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" align="center">
+                                                <br>
+                      <div class="btn-group btn-group-justified" role="group" aria-label="...">
+                        <div class="btn-group" role="group">
+                              <button  class="btn " style="background-color:#fed136;color:black;font-weight:bold;" onclick="send()">Search</button>
                         </div>
-                        <div  class="col-lg-offset-2 col-lg-8 col-lg-offset-2 ">
-                            <input type="date" id="datemoving" class="form-control">
+                      </div>
+                      </div>
+                                              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" align="center">
+                                                <br>
+                                              </div>
+        </ul>
+      </div>
+
+      <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
+      <!-- Product grid -->
+ <p id="in2"></p>
+      <section class="grid">
+    
+      <div class="col-xs-12 col-sm-8 col-md-6 col-lg-4">
+      
+        <!-- Products -->
+
+        <div class="product">
+
+          <div class="product__info">
+
+            <img class="product__image" src="img/userCompare.png" alt="Product 1" />
+            <h3 class="product__title ">Chryseia
+              <a href="#Facebook">
+                <span class=" fa fa-facebook-square" ></span>
+              </a>
+              <a href="#chat" >
+                <span class="glyphicon glyphicon-envelope" style="color:#fed136;"></span>
+              </a>
+            </h3>
+            <span class="product__any extra highlight">Gender: </span>
+            <span class="product__any extra highlight">Age: </span>
+            <span class="product__any extra highlight">Status: </span>
+            <span class="product__any extra highlight">Clean: </span>
+            <span class="product__any extra highlight">Party:</span>
+            <span class="product__any extra highlight">Snore: </span>
+            <span class="product__any extra highlight">Smoke: </span>
+            <span class="product__any extra highlight">Pets: </span>
+            <span class="product__any extra highlight">Rental period: </span>
+            <span class="product__any extra highlight">Rental cost: </span>
+            <span class="product__any  highlight">Approx. move in date: </span>
+
+            <button class="action action--button action--buy"><i class="fa fa-paper-plane"></i><span class="action__text">Send Request</span></button-->
+
+          </div>
+          <label class="action action--compare-add"><input class="check-hidden" type="checkbox" /><i class="fa fa-plus"></i><i class="fa fa-check"></i><span class="action__text action__text--invisible">Add to compare</span></label>
+        </div>
+      </div>
+
+      
+
+      </section>
+      </div>
+    </div><!-- /view -->
+    <!-- product compare wrapper -->
+    <section class="compare"><!--class="fa fa-remove"-->
+      <button class="action action--close"><i class="fa fa-remove fa-3x" style="color:#fed136"></i><span class="action__text action__text--invisible">Close comparison overlay</span></button>
+    </section>
+
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="myModalLabel">โปรไฟล์</h4>
                         </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="form-group">  
-                <div class="row">
-                    <div  class="col-lg-12 text-center ">
-                        <p align="center"> Allow (Choose if you want allow)
-                           <input type="checkbox" name="room_allow" value="Smoke"> Smoke
-                           <input type="checkbox" name="room_allow" value="Pet"> Pet
-                       </p>
-                       <p align="center"> <input type="submit" name="search" value="Search"  class="btn btn-info">
-                       </p>
-                   </div>
-               </div>
-           </div>
-       </div>
-   </div>
-</form> 
-</div>
-</div>
-
-
-<div class="col-md-4 col-sm-6 portfolio-item">
-    <a href="#room1" class="portfolio-link" data-toggle="modal">
-        <div class="portfolio-hover">
-            <div class="portfolio-hover-content">
-                <i class="fa fa-plus fa-3x"></i>
-            </div>
-        </div>
-        <img src="images/r6.jpg" class="img-responsive" alt="" style="width:370px; height:230px;">
-    </a>
-    <div class="portfolio-caption">
-        <h4>JoJa Hotel</h4>
-        <p class="text-muted">8500 Baht/Month</p>
-    </div>
-</div>
-<div class="col-md-4 col-sm-6 portfolio-item">
-    <a href="#room2" class="portfolio-link" data-toggle="modal">
-        <div class="portfolio-hover">
-            <div class="portfolio-hover-content">
-                <i class="fa fa-plus fa-3x"></i>
-            </div>
-        </div>
-        <img src="images/r1.jpg" class="img-responsive" alt="" style="width:370px; height:230px;">
-    </a>
-    <div class="portfolio-caption">
-        <h4>Startup Framework</h4>
-        <p class="text-muted">Website Design</p>
-    </div>
-</div>
-<div class="col-md-4 col-sm-6 portfolio-item">
-    <a href="#room3" class="portfolio-link" data-toggle="modal">
-        <div class="portfolio-hover portfolio-hover">
-            <div class="portfolio-hover-content">
-                <i class="fa fa-plus fa-3x"></i>
-            </div>
-        </div>
-        <img src="images/r2.jpg" class="img-responsive" alt="" style="width:370px; height:230px;">
-    </a>
-    <div class="portfolio-caption">
-        <h4>Treehouse</h4>
-        <p class="text-muted">Website Design</p>
-    </div>
-</div>
-<div class="col-md-4 col-sm-6 portfolio-item">
-    <a href="#room4" class="portfolio-link" data-toggle="modal">
-        <div class="portfolio-hover">
-            <div class="portfolio-hover-content">
-                <i class="fa fa-plus fa-3x"></i>
-            </div>
-        </div>
-        <img src="images/r3.jpg" class="img-responsive" alt="" style="width:370px; height:230px;">
-    </a>
-    <div class="portfolio-caption">
-        <h4>Golden</h4>
-        <p class="text-muted">Website Design</p>
-    </div>
-</div>
-<div class="col-md-4 col-sm-6 portfolio-item">
-    <a href="#room5" class="portfolio-link" data-toggle="modal">
-        <div class="portfolio-hover">
-            <div class="portfolio-hover-content">
-                <i class="fa fa-plus fa-3x"></i>
-            </div>
-        </div>
-        <img src="images/r4.jpg" class="img-responsive" alt="" style="width:370px; height:230px;">
-    </a>
-    <div class="portfolio-caption">
-        <h4>Escape</h4>
-        <p class="text-muted">Website Design</p>
-    </div>
-</div>
-<div class="col-md-4 col-sm-6 portfolio-item">
-    <a href="#room6" class="portfolio-link" data-toggle="modal">
-        <div class="portfolio-hover">
-            <div class="portfolio-hover-content">
-                <i class="fa fa-plus fa-3x"></i>
-            </div>
-        </div>
-        <img src="images/r7.jpg" class="img-responsive" alt="" style="width:370px; height:230px;">
-    </a>
-    <div class="portfolio-caption">
-        <h4>Dreams</h4>
-        <p class="text-muted">Website Design</p>
-    </div>
-</div>
-</div>
-</div>
-</section>
-
-
-<!-- Sild Pic -->
-<div class="portfolio-modal modal fade" id="room1" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
                         <div class="modal-body" >
-                            <!-- Project Details Go Here -->
-                            <h2>Joja Hotel</h2>
-                            <p class="item-intro text-muted">Price 8,500 Baht/Month</p>
-                            <img class="img-responsive img-centered" src="images/r6.jpg" alt="">
-                            <form>
-                                <div style="margin-bottom:7px;">Moving Date </div>
-                                <div style="margin-bottom:5px;"><input type="date" name="movingdate" disabled></div>
-                            </form>
-                            <div style="margin-bottom:5px;">
-                                <strong>Smoke : Allow</strong>
-                            </div>
-                            <strong>Pet : Allow</strong>
-                            <div style="margin-bottom:5px;"> <strong>Status :  </strong><strong style="color:green"> ON </strong></div>
-                            <div style="margin-bottom:5px;"> <strong>Contact : Thanachai Lamyai </stong></div>
-                            <div style="margin-bottom:5px;"> <stong>Tel : 089-xxx-xxxx </stong></div>
-
-                            <div style="margin-bottom:5px;">
-
-                            </div>
-                            <div class="col-lg-12" style="margin-bottom:5px; background-color: #ff4d4d;">
-                                <strong style="color:white;">Location</strong>
-                            </div>
-
-                            <div  class="col-lg-12" id="googleMap" style="width:100%;height:380px;margin-bottom:5px;"></div>
-                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close </button>
+                           
+                            <input type="hidden" value="" id="iddd">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-success" onclick="sendInvite($('#iddd').val())">เชิญให้มาอยู่ด้วยกัน</button>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
     </div>
-</div>
+    <p id="in2"></p>
 
-<!-- jQuery -->
-<script src="vendor/jquery/jquery.min.js"></script>
+    <script src="js/classie.js"></script>
+    <script src="js/main.js"></script>
 
-<!-- Bootstrap Core JavaScript -->
-<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
 
-<!-- Plugin JavaScript -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+  
+          </div>
 
-<!-- Contact Form JavaScript -->
-<script src="js/jqBootstrapValidation.js"></script>
-<script src="js/contact_me.js"></script>
-
-<!-- Theme JavaScript -->
-<script src="js/agency.min.js"></script>
-
-</body>
-
+  </body>
 </html>
